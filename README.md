@@ -65,6 +65,12 @@ kids-games/
 
 This repository is intentionally static and GitHub-Pages-friendly. Publish the repository root from the `main` branch and the same game library becomes a single public website.
 
+Expected site URL:
+
+```text
+https://godtech-ctl-create.github.io/kids-games/
+```
+
 Visitors can choose any game without installing Python, Node.js, Pygame, or a game engine.
 
 ## Product direction
