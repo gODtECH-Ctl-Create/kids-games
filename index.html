@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A browser-playable collection of beginner and intermediate games for TechTrack Kids demos.">
+  <title>TechTrack Kids Game Arcade</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="TechTrack Kids Game Arcade home">
+      <span class="brand-mark">🎮</span>
+      <span><strong>TechTrack Kids</strong><small>Game Arcade</small></span>
+    </a>
+    <div class="tagline">LEARN IT. BUILD IT. SHOW IT.</div>
+  </header>
+
+  <main>
+    <section id="libraryView" class="library-view" aria-labelledby="libraryTitle">
+      <div class="hero">
+        <p class="eyebrow">Playable reference library</p>
+        <h1 id="libraryTitle">Pick a game and play.</h1>
+        <p>Simple browser games for demonstrations, inspiration, and TechTrack Kids showcases. No install required.</p>
+        <div class="filters" role="group" aria-label="Filter games">
+          <button class="filter active" data-filter="all" type="button">All games</button>
+          <button class="filter" data-filter="beginner" type="button">Beginner</button>
+          <button class="filter" data-filter="intermediate" type="button">Intermediate</button>
+        </div>
+      </div>
+      <div id="gameGrid" class="game-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="playerView" class="player-view" hidden aria-labelledby="gameTitle">
+      <div class="player-topbar">
+        <button id="backButton" class="secondary-button" type="button">← Game Library</button>
+        <div class="player-heading">
+          <span id="gameEmoji" class="game-emoji" aria-hidden="true"></span>
+          <div>
+            <p id="gameLevel" class="eyebrow"></p>
+            <h1 id="gameTitle"></h1>
+          </div>
+        </div>
+        <button id="restartButton" class="primary-button" type="button">↻ Restart</button>
+      </div>
+
+      <div class="game-shell">
+        <div class="canvas-wrap">
+          <canvas id="gameCanvas" width="800" height="500" tabindex="0" aria-label="Game area"></canvas>
+        </div>
+        <aside class="game-info">
+          <div>
+            <h2>How to play</h2>
+            <p id="gameInstructions"></p>
+          </div>
+          <div>
+            <h2>What it demonstrates</h2>
+            <div id="gameSkills" class="skill-list"></div>
+          </div>
+          <div id="status" class="status" aria-live="polite">Ready.</div>
+        </aside>
+      </div>
+
+      <div id="touchControls" class="touch-controls" aria-label="Game controls"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>TechTrack Kids Game Arcade</span>
+    <span>One repository. Many games. One GitHub Pages site.</span>
+  </footer>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
